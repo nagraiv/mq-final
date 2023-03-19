@@ -58,7 +58,7 @@
                 </li>
             </ul>
             <a href="#0" class="trends__article-link">
-                <h3 class="trends__article-title">Сейчас в&nbspтренде: сад на&nbspподоконнике</h3>
+                <h4 class="trends__article-title">Сейчас в&nbspтренде: сад на&nbspподоконнике</h4>
             </a>
         </div>
     </article>
@@ -70,7 +70,7 @@
                 </li>
             </ul>
             <a href="#0" class="trends__article-link">
-                <h3 class="trends__article-title">сыры на красивых картинках из&nbspинтернета: какие они на вкус?</h3>
+                <h4 class="trends__article-title">сыры на красивых картинках из&nbspинтернета: какие они на вкус?</h4>
             </a>
         </div>
     </article>
@@ -85,7 +85,7 @@
                 </li>
             </ul>
             <a href="#0" class="trends__article-link">
-                <h3 class="trends__article-title">СОБИРАЕМСЯ В&nbspПЕРВЫЙ ПОХОД В&nbspГОРЫ</h3>
+                <h4 class="trends__article-title">СОБИРАЕМСЯ В&nbspПЕРВЫЙ ПОХОД В&nbspГОРЫ</h4>
             </a>
         </div>
     </article>
@@ -100,7 +100,7 @@
                 </li>
             </ul>
             <a href="#0" class="trends__article-link">
-                <h3 class="trends__article-title">Сейчас в&nbspтренде: сКОЛЬКО ВИТАМИНА c В&nbspЛИМОНАХ?</h3>
+                <h4 class="trends__article-title">Сейчас в&nbspтренде: сКОЛЬКО ВИТАМИНА c В&nbspЛИМОНАХ?</h4>
             </a>
         </div>
     </article>
@@ -601,13 +601,27 @@
 </script>
 
 <script>
-    if (window.innerWidth > window.innerHeight && window.innerWidth >= 620) {
+    let size = 0;
+    window.addEventListener('resize', function(event){
         document.querySelectorAll('.shop__article').forEach(item => {
-            let size = (285 - item.offsetHeight)/2;
-            item.style.marginTop = size + "px";
-            item.style.marginBottom = size + 25 + "px";
+            if (window.innerWidth > window.innerHeight && window.innerWidth >= 620) {
+                if (item.offsetHeight < 285) {
+                    size = (285 - item.offsetHeight)/2;
+                    item.style.marginTop = size + "px";
+                    item.style.marginBottom = size + 22 + "px";
+                } else {
+                    item.style.marginTop = '0';
+                    item.style.marginBottom = 22 + "px";
+                }
+                console.log(size, item.style.marginTop, item.style.marginBottom);
+            } else {
+            size = window.innerWidth - 103;
+            item.style.marginTop = Math.min(257, size) + "px";
+            item.style.marginBottom = 22 + "px";
+            console.log(size, item.style.marginTop, item.style.marginBottom);
+            }
         });
-    };
+    }, true);
 </script>
 
 </body>
