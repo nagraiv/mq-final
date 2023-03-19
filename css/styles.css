@@ -776,7 +776,8 @@ body {
 }
 
 .shop__article-content {
-    /*margin-top: 19px;*/
+    display: flex;
+    flex-direction: column;
     margin: 19px auto 0;
     max-width: 370px;
     position: relative;

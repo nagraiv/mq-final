@@ -605,7 +605,8 @@
     let pictureHeight = 0;
     window.addEventListener('resize', function(){
         document.querySelectorAll('.shop__article').forEach(item => {
-            pictureHeight = item.querySelector('.shop__article-preview').offsetHeight;
+            let pictureObj = item.querySelector('.shop__article-preview');
+            pictureHeight = pictureObj.offsetHeight;
             // console.log(item.querySelector('.shop__article-preview'));
             if (window.innerWidth > window.innerHeight && window.innerWidth >= 620) {
                 if (item.offsetHeight < pictureHeight) {
@@ -616,13 +617,12 @@
                     item.style.marginTop = '0';
                     item.style.marginBottom = 22 + "px";
                 }
+                pictureObj.style.top = "50%";
             } else {
                 size = window.innerWidth - 103;
                 item.style.marginTop = Math.min(pictureHeight-28, size) + "px";
                 item.style.marginBottom = 22 + "px";
-                item.querySelector('.shop__article-preview').style.top = (28 - pictureHeight) + "px";
-                console.log((28 - pictureHeight) + "px");
-                // top: max(-257px, calc(103px - 100vw));
+                pictureObj.style.top = Math.max(28 - pictureHeight, 103-window.innerWidth) + "px";
             }
         });
     }, true);
