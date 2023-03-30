@@ -110,7 +110,11 @@
     <main class="blog-main">
         <article class="main__article">
             <div class="main__article-preview">
-                <img src="images/last-post1.jpg" alt="A person walking along a seashore at sunrise" class="article__picture">
+                <picture>
+                    <source media="(max-width: 640px), (min-width: 1200px)" srcset="images/last-post1.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/last-post-tablet1.jpg">
+                    <img src="images/last-post1.jpg" class="article__picture" alt="A person walking along a seashore at sunrise">
+                </picture>
             </div>
             <div class="main__article-content">
                 <header class="main__article-header">
@@ -141,7 +145,11 @@
         </article>
         <article class="main__article">
             <div class="main__article-preview">
-                <img src="images/last-post2.jpg" alt="A young woman doing yoga on the beach" class="article__picture">
+                <picture>
+                    <source media="(max-width: 640px), (min-width: 1200px)" srcset="images/last-post2.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/last-post-tablet2.jpg">
+                    <img src="images/last-post2.jpg" alt="A young woman doing yoga on the beach" class="article__picture">
+                </picture>
             </div>
             <div class="main__article-content">
                 <header class="main__article-header">
@@ -156,7 +164,7 @@
                         </ul>
                     </nav>
                     <a href="#0" class="main__article-link">
-                        <h2 class="main__article-title">Йога для начинающих в&nbsp;домашних условиях</h2>
+                        <h2 class="main__article-title">Йога для начинающих в домашних условиях</h2>
                     </a>
                     <div class="main__article-about">
                         <time class="main__article-time" datetime="2019-06-10">10 июня 2019</time>
@@ -172,7 +180,11 @@
         </article>
         <article class="main__article">
             <div class="main__article-preview">
-                <img src="images/last-post3.jpg" alt="A crowded music festival" class="article__picture">
+                <picture>
+                    <source media="(max-width: 640px), (min-width: 1200px)" srcset="images/last-post3.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/last-post-tablet3.jpg">
+                    <img src="images/last-post3.jpg" alt="A crowded music festival" class="article__picture">
+                </picture>
             </div>
             <div class="main__article-content">
                 <header class="main__article-header">
@@ -203,7 +215,11 @@
         </article>
         <article class="main__article">
             <div class="main__article-preview">
-                <img src="images/last-post4.jpg" alt="A massive wooden table with food served on it" class="article__picture">
+                <picture>
+                    <source media="(max-width: 640px), (min-width: 1200px)" srcset="images/last-post4.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/last-post-tablet4.jpg">
+                    <img src="images/last-post4.jpg" alt="A massive wooden table with food served on it" class="article__picture">
+                </picture>
             </div>
             <div class="main__article-content">
                 <header class="main__article-header">
@@ -218,7 +234,7 @@
                         </ul>
                     </nav>
                     <a href="#0" class="main__article-link">
-                        <h2 class="main__article-title">Наукоёмкий подход к&nbsp;кулинарии</h2>
+                        <h2 class="main__article-title">Наукоёмкий подход к кулинарии</h2>
                     </a>
                     <div class="main__article-about">
                         <time class="main__article-time" datetime="2019-06-10">10 июня 2019</time>
@@ -234,7 +250,11 @@
         </article>
         <article class="main__article">
             <div class="main__article-preview">
-                <img src="images/last-post5.jpg" alt="A pillow with a print 'hang out spot' on a chair" class="article__picture">
+                <picture>
+                    <source media="(max-width: 640px), (min-width: 1200px)" srcset="images/last-post5.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/last-post-tablet5.jpg">
+                    <img src="images/last-post5.jpg" alt="A pillow with a print 'hang out spot' on a chair" class="article__picture">
+                </picture>
             </div>
             <div class="main__article-content">
                 <header class="main__article-header">
@@ -272,7 +292,7 @@
         <div class="mobile-landscape-transform-left">
             <section class="aside__new-posts">
                 <div class="section__title-position">
-                    <h3 class="section__title-text">Новые посты</h3>
+                    <h3 class="section__title-text aside__title">Новые посты</h3>
                 </div>
                 <article class="posts__article">
                     <img src="images/2.jpg" alt="" class="posts__picture">
@@ -335,7 +355,7 @@
 
             <section class="aside__mailing">
                 <div class="section__title-position">
-                    <h3 class="section__title-text">Рассылка</h3>
+                    <h3 class="section__title-text aside__title">Рассылка</h3>
                 </div>
                 <form action="#" class="form-subscribe">
                     <label class="subscribe-field-label">
@@ -349,7 +369,7 @@
         <div class="mobile-landscape-transform-right">
             <section class="aside__tags">
                 <div class="section__title-position">
-                    <h3 class="section__title-text">Теги</h3>
+                    <h3 class="section__title-text aside__title">Теги</h3>
                 </div>
                 <ul class="aside__tags-list">
                     <li class="aside__tags-item">
@@ -381,7 +401,7 @@
 
             <section class="aside__themes">
                 <div class="section__title-position">
-                    <h3 class="section__title-text">Темы</h3>
+                    <h3 class="section__title-text aside__title">Темы</h3>
                 </div>
                 <ul class="aside__themes-list">
                     <li class="aside__themes-item">
@@ -420,7 +440,12 @@
     </div>
     <article class="shop__article">
         <div class="shop__article-preview">
-            <img src="images/shop-item-mobile1.jpg" alt="A pink cushion with a nice print" class="article__picture">
+            <picture>
+                <source media="(max-width: 640px), (max-height: 450px)" srcset="images/shop-item-mobile1.jpg">
+                <source media="(min-width: 641px) and (max-width: 1199px) and (min-height: 451px)" srcset="images/shop-item-tablet1.jpg">
+                <source media="(min-width: 1200px)" srcset="images/shop-item-desk1.jpg">
+                <img src="images/shop-item-tablet1.jpg" alt="A pink cushion with a nice print" class="article__picture">
+            </picture>
         </div>
         <div class="shop__article-content">
             <h4 class="shop__article-title">Подушки на диван</h4>
@@ -439,7 +464,12 @@
     </article>
     <article class="shop__article">
         <div class="shop__article-preview">
-            <img src="images/shop-item-mobile2.jpg" alt="A handmade woolly rabbit" class="article__picture">
+            <picture>
+                <source media="(max-width: 640px), (max-height: 450px)" srcset="images/shop-item-mobile2.jpg">
+                <source media="(min-width: 641px) and (max-width: 1199px) and (min-height: 451px)" srcset="images/shop-item-tablet2.jpg">
+                <source media="(min-width: 1200px)" srcset="images/shop-item-desk2.jpg">
+                <img src="images/shop-item-tablet2.jpg" alt="A handmade woolly rabbit" class="article__picture">
+            </picture>
         </div>
         <div class="shop__article-content">
             <h4 class="shop__article-title">Кукла «Зайчик»</h4>
@@ -459,7 +489,12 @@
     </article>
     <article class="shop__article">
         <div class="shop__article-preview">
-            <img src="images/shop-item-mobile3.jpg" alt="A wooden frame" class="article__picture">
+            <picture>
+                <source media="(max-width: 640px), (max-height: 450px)" srcset="images/shop-item-mobile3.jpg">
+                <source media="(min-width: 641px) and (max-width: 1199px) and (min-height: 451px)" srcset="images/shop-item-tablet3.jpg">
+                <source media="(min-width: 1200px)" srcset="images/shop-item-desk3.jpg">
+                <img src="images/shop-item-tablet3.jpg" alt="A wooden frame" class="article__picture">
+            </picture>
         </div>
         <div class="shop__article-content">
             <h4 class="shop__article-title">Шестиугольная рамка</h4>
@@ -607,22 +642,23 @@
         document.querySelectorAll('.shop__article').forEach(item => {
             let pictureObj = item.querySelector('.shop__article-preview');
             pictureHeight = pictureObj.offsetHeight;
-            // console.log(item.querySelector('.shop__article-preview'));
-            if (window.innerWidth > window.innerHeight && window.innerWidth >= 620) {
-                if (item.offsetHeight < pictureHeight) {
-                    size = (pictureHeight - item.offsetHeight)/2;
-                    item.style.marginTop = size + "px";
-                    item.style.marginBottom = size + 22 + "px";
+            if (window.innerHeight <= 450 || window.innerWidth<= 450) {
+                if (window.innerWidth > window.innerHeight && window.innerWidth >= 640) {
+                    if (item.offsetHeight < pictureHeight) {
+                        size = (pictureHeight - item.offsetHeight) / 2;
+                        item.style.marginTop = size + "px";
+                        item.style.marginBottom = size + 22 + "px";
+                    } else {
+                        item.style.marginTop = '0';
+                        item.style.marginBottom = 22 + "px";
+                    }
+                    pictureObj.style.top = "50%";
                 } else {
-                    item.style.marginTop = '0';
+                    size = window.innerWidth - 103;
+                    item.style.marginTop = Math.min(pictureHeight - 28, size) + "px";
                     item.style.marginBottom = 22 + "px";
+                    pictureObj.style.top = Math.max(28 - pictureHeight, 103 - window.innerWidth) + "px";
                 }
-                pictureObj.style.top = "50%";
-            } else {
-                size = window.innerWidth - 103;
-                item.style.marginTop = Math.min(pictureHeight-28, size) + "px";
-                item.style.marginBottom = 22 + "px";
-                pictureObj.style.top = Math.max(28 - pictureHeight, 103-window.innerWidth) + "px";
             }
         });
     }, true);
