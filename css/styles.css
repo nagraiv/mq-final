@@ -26,7 +26,7 @@ a {
     color: inherit;
 }
 
-a:focus-visible {
+:focus-visible {
     outline: 2px solid #eeeeee;
     outline-offset: 2px;
 }
@@ -917,7 +917,7 @@ span.alert {
 }
 
 .feedback__radio:checked + .feedback__radio-text::before {
-    background: url("../svg/form-circle.svg") no-repeat center / 25px;
+    background-image: url("../svg/form-circle.svg");
 }
 
 .feedback__textarea {
@@ -1520,7 +1520,7 @@ span.alert {
         margin-right: 12px;
     }
 
-    textarea.feedback__textarea {
+    .feedback__textarea {
         padding: 20px;
     }
 
