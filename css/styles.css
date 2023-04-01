@@ -840,6 +840,7 @@ body {
     position: relative;
     max-width: 390px;
     max-height: 600px;
+    /*height: 550px;*/
     box-sizing: border-box;
     border: 1px solid #e2e2e2;
     /*margin: 56px 15px 30px;*/
@@ -1529,7 +1530,7 @@ span.alert {
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 600px) and (orientation: landscape) {
     .popup {
         margin-top: 15px;
         max-height: 345px;
@@ -1569,6 +1570,9 @@ span.alert {
     .select-label,
     .popup-landscape-right .form-hint {
         margin-top: -5px;
+    }
+    .feedback__radio-text:first-of-type {
+        margin-right: 10%;
     }
 
     span.alert {

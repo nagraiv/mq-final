@@ -619,6 +619,15 @@
     const alertMsg = document.querySelector('.alert');
     const textArea = document.querySelector('.feedback__textarea');
     const sendFeedbackBtn = document.querySelector('.send-button');
+
+    setTimeout(function () {
+        let number = sendFeedbackBtn.getBoundingClientRect().bottom;
+        const feedbackForm = document.querySelector('.popup');
+        if (window.innerWidth <= 640) {
+            feedbackForm.style.height = number - 56 + 30 + "px";
+        }
+    }, 10100);
+
     sendFeedbackBtn.addEventListener('click', function () {
         if (textArea.value === "" || document.querySelector('.feedback__radio:checked') == null) {
             alertMsg.style.display = 'block';
@@ -642,7 +651,7 @@
         document.querySelectorAll('.shop__article').forEach(item => {
             let pictureObj = item.querySelector('.shop__article-preview');
             pictureHeight = pictureObj.offsetHeight;
-            if (window.innerHeight <= 450 || window.innerWidth<= 450) {
+            if (window.innerHeight <= 450 || window.innerWidth <= 450) {
                 if (window.innerWidth > window.innerHeight && window.innerWidth >= 640) {
                     if (item.offsetHeight < pictureHeight) {
                         size = (pictureHeight - item.offsetHeight) / 2;
